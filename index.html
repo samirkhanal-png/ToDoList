@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      width: 100%;
+      height: 100%;
+    }
+
+    #TaskField,#addTask{
+      display: inline-block;
+      margin:0 10px;
+    }
+
+    #addTask{
+      border: none;
+      background-color: lightgreen;
+      padding:5px 10px;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    #task-container{
+      margin-top:20px;
+      width: 50%;
+      height: 50%;
+      background: rgba(211, 211, 211, 0.664);      
+      padding: 10px;
+    }
+
+    #wrapper{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+    }
+
+    #TaskField{
+      margin-top:20px;
+      margin-bottom: 10px;
+      width: 90%;
+      height: 40px;
+      border: none;
+    }
+
+    #TaskField::placeholder{
+      font-size:20px;
+    }
+
+    #addTask{
+      background: blue;
+      padding: 10px 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+
+    <!-- Task List -->
+    <div id="task-container">
+    </div>
+    
+    <!-- Input Task -->
+    <div id="inputText">
+    <input type="text" name="" id="TaskField" placeholder="Enter your task">
+    <button id="addTask">Add</button>
+    </div>
+  
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
