@@ -47,7 +47,7 @@ function createUi(obj){
   li.style.justifyContent="space-between"
   li.style.gap=5+"px"
   li.style.marginTop=5+"px"
-  li.setAttribute("id",obj.id)
+  li.setAttribute("id",obj.id) //helps in deleting bro
 
   let checkbox=document.createElement("input")
   checkbox.setAttribute("type","checkbox")
@@ -88,8 +88,8 @@ function createUi(obj){
   checkbox.addEventListener("click",()=>{
    //initialize the previous checkbox
   if(checkbox.checked){
-    console.dir(li.firstChild)
-    li.firstChild.style.textDecoration="line-through"
+    console.table(li.firstChild)
+    li.style.textDecoration="line-through"
 
     let taskArr=getFromLocalStorage()
     taskArr.forEach((value)=>{
@@ -101,7 +101,6 @@ function createUi(obj){
   }
   else{
     li.style.textDecoration="none"
-
     let taskArr=getFromLocalStorage()
     taskArr.forEach((value)=>{
       if(value.id==obj.id){
